@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Chamando o css -->
+        <link rel="stylesheet" href="css/formulario.css">
+        
+        <title>Formulario</title>
+    </head>
+
+    <body>
+        <div>
+            <h1 id="titulo">Cadastro de Devs</h1>
+            <p id="subtitulo">Complete as iformações</p>
+        </div>
+        <!-- Inicio do formulario -->
+        <form action="https://api.staticforms.xyz/submit" method="ost">
+            <!-- Espaço para a chave da api -->
+            <input type="hidden" name="accessKey" value="da126bad-5bc0-4e9a-ba4f-78c3db3cb3e7">
+            
+            <!-- alt l o faz abrir o index -->
+            <!-- Ctrl l o faz abrir a file -->
+
+            <fieldset>
+                <!-- Campo nome e sobrenome -->
+                <div class="campo">
+                    <label for="nome"><strong>nome</strong></label>
+                    <input type="text" name="$nome" id="nome" maxlength="40" required>
+                    <!-- caixa de texto, nome acima da caixa de texto, identificação= nome, maximo de 40 colunas -->
+                </div>
+            
+                <div class="campo">
+                <label for="sobrenome"><strong>Sobrenome</strong></label>
+                <input type="text" name="$sobrenome" id="sobrenome" maxlength="40" required>
+                </div>
+                
+            </fieldset>
+            <div class="campo">
+                <label for="email" name="$email" id="email" required><strong>Email</strong></label>
+                <input type="email" name="$email" id="email" required>
+            </div>
+
+            <div class="campo">
+                <label for="lado"><strong>De  qual lado da aplicação você desenvolve</strong></label>
+                <label for=""><input type="radio" name="devweb" id="frontend" value="frontend">FrontEnd</label>
+                <label for=""><input type="radio" name="devweb" id="backende" value="backende">BackEnd</label>
+                <label for=""><input type="radio" name="devweb" id="fullstack" value="fullstack">FullStack</label>
+            </div>
+            <!-- Campo de senioridade com 3 opções para a escolha (select option) -->
+            <div class="campo">
+            <label for="senioridade"><strong>Senioridade</strong></label>
+            <select name="aplicção" id="senioridade">
+                <option selected disabled value="">Selecione</option>
+                <option>Júnior</option>
+                <option>Pleno</option>
+                <option>Senior</option>
+            </select>
+            </div>
+
+            <!-- Campo de tecnologia para escolha de 1 ou mais opções -->
+            <fieldset class="grupo">
+            <div id= "check">
+                    <label><strong>Selecione a tecnologia que utiliza</strong></label><br></br>
+                    <input type="checkbox" name="tecnologia1" id="1" value="HTML">
+                    <label for="tecnologia1">HTML</label></input>
+
+                    <input type="checkbox" name="tecnologia2" id="2" value="CSS">
+                    <label for="tecnologia2">css</label>CSS</input>
+
+                    <input type="checkbox" name="tecnologia3" id="3" value="Javascript">
+                    <label for="tecnologia3">Javascript</label>Javascript</input>
+
+                    <input type="checkbox" name="tecnologia4" id="" value="PHP">
+                    <label for="tecnologia4">PHP</label></input>
+                    
+                    <input type="checkbox" name="tecnologia5" id="" value="C#">
+                    <label for="tecnologia5">C#</label></input>
+
+                    <input type="checkbox" name="tecnologia6" id="" value="PYTHON">
+                    <label for="tecnologia6">PYTHON</label></input>
+
+                    <input type="checkbox" name="tecnologia7" id="" value="JAVA">
+                    <label for="tecnologia7">JAVA</label></input>
+            </div>
+            </fieldset>
+            <!-- Caixa de texto -->
+            <div class="campo">
+                <br></br>
+            <label for="experiencia"><strong>Conte um pouco mais da sua experiência</strong></label>
+            <textarea rows="6" style="width: 26em" id="experiencia" name="$experiência"></textarea>
+            </div>
+
+            <!-- Botão para enviar o formulario -->
+            <button class="botao" type="submit" value="submit">Concluido</button>
+        </form>
+    </body>
+<!-- Chamando Javascript -->
+<javascript src="js/verifica.js"></javascript>
+</html>
